@@ -10,6 +10,9 @@ buildscript {
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
+
+	mkdir 'logs'
+	
 }
 
 apply plugin: 'java'
