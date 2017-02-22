@@ -13,7 +13,25 @@ buildscript {
     	}
 
 	mkdir 'logs'
-  println System.getProperty("java.home");
+
+    mkdir 'src/main/java/com/sample/aop'    //@intercept classes
+  mkdir 'src/main/java/com/sample/web/controller'  //@controller classes
+  mkdir 'src/main/java/com/sample/web/form'          //html from object classes
+  mkdir 'src/main/java/com/sample/web/restcontroller'  //@restcontroller classes
+  mkdir 'src/main/java/com/sample/service' //@service classes
+  mkdir 'src/main/java/com/sample/domain' //domain classes
+  mkdir 'src/main/java/com/sample/dao'  //@repository classes
+
+    mkdir 'src/main/resources/mybatis'    //mybatis xml files
+  mkdir 'src/main/resources/static'     //static resources
+  mkdir 'src/main/resources/static/images'     
+  mkdir 'src/main/resources/static/js'     
+  mkdir 'src/main/resources/static/css'    
+  mkdir 'src/main/resources/static/html'
+
+  mkdir 'src/main/resources/templates'  //ThymeLeaf templates
+
+  //println System.getProperty("java.home");
 }
 
 apply plugin: 'java'
@@ -35,13 +53,12 @@ repositories {
 
 
 dependencies {
-	compile('org.webjars:jquery-ui:1.11.4')
+  compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1')
+  compile('org.springframework.boot:spring-boot-starter-security')
 
   compile('org.springframework.boot:spring-boot-starter-actuator')
   //Spring JPA
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1')
-	compile('org.springframework.boot:spring-boot-starter-security')
   //Spring ThymeLeaf
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
   //Spring Web
@@ -54,12 +71,11 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
   //Test
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	
 	//ThymeleafでSpring Securityの機能を使うために追加
 	compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4')
 
-//  compile("org.mybatis:mybatis:3.2.8")
-//  compile("org.mybatis:mybatis-spring:1.2.2")
+  //compile("org.mybatis:mybatis:3.2.8")
+  //compile("org.mybatis:mybatis-spring:1.2.2")
   
 	//よく使うライブラリたち
 	compile 'org.apache.commons:commons-csv:1.2'
@@ -69,8 +85,11 @@ dependencies {
   
 	//SpringでDBUnitを楽に使うためのライブラリ
 	testCompile 'com.github.springtestdbunit:spring-test-dbunit:1.3.0'
-
+  //log4jdbc
   compile("org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16")
+
+  compile('org.webjars:jquery-ui:1.11.4')
   
 }
+
 

@@ -15,4 +15,7 @@ Helloworld実装しただけ
     参考    "http://www.andr0o0id.com/?p=2245"
 
     
-    
+#### 20170222
+
+STSのプラグインMyBatipseをマーケットプレイスから入れてみた。使い方はこれから調べる。
+
