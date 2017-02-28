@@ -22,7 +22,7 @@ buildscript {
   mkdir 'src/main/java/com/sample/domain' //domain classes
   mkdir 'src/main/java/com/sample/dao'  //@repository classes
 
-    mkdir 'src/main/resources/mybatis'    //mybatis xml files
+  mkdir 'src/main/resources/mybatis'    //mybatis xml files
   mkdir 'src/main/resources/static'     //static resources
   mkdir 'src/main/resources/static/images'     
   mkdir 'src/main/resources/static/js'     
@@ -89,7 +89,7 @@ dependencies {
   compile("org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16")
 
   compile('org.webjars:jquery-ui:1.11.4')
-  
+  compile('org.webjars:bootstrap:3.3.7-1')
 }
 
 
